@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #57364d;
+  background: #fff7fb;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+.countdown-page {
+  background:
+    linear-gradient(120deg, rgba(255, 224, 239, 0.88), transparent 38%),
+    linear-gradient(300deg, rgba(217, 247, 255, 0.9), transparent 42%),
+    linear-gradient(135deg, #fff8c9, #ffe6f2 45%, #e4f7ff);
+}
+
+.quotes-page {
+  background:
+    linear-gradient(130deg, rgba(223, 247, 232, 0.9), transparent 40%),
+    linear-gradient(310deg, rgba(255, 224, 237, 0.88), transparent 42%),
+    linear-gradient(135deg, #fff3c4, #fce3ff 50%, #dff8ff);
+}
+
+.app-box {
+  width: min(920px, 100%);
+  padding: 35px;
+  text-align: center;
+  border: 3px solid #ffffff;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 50px rgba(197, 99, 145, 0.22);
+}
+
+.small-title {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-bottom: 15px;
+  border-radius: 999px;
+  background: #ffe0ef;
+  color: #c04882;
+  font-weight: bold;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #b73578;
+}
+
+.subtitle {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #765469;
+}
+
+.timer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin: 25px 0;
+}
+
+.time-card {
+  min-height: 135px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 2px solid #ffd2e7;
+  box-shadow: 0 10px 24px rgba(224, 124, 170, 0.18);
+}
+
+.time-card span {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: bold;
+  color: #ef6aa7;
+}
+
+.time-card p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #7a5268;
+}
+
+.message {
+  min-height: 36px;
+  margin-bottom: 18px;
+  color: #d13a76;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 22px 0;
+}
+
+button,
+.page-link {
+  border: 0;
+  border-radius: 999px;
+  padding: 13px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button {
+  color: #ffffff;
+  background: #ef6aa7;
+  box-shadow: 0 8px 18px rgba(239, 106, 167, 0.35);
+}
+
+.secondary-btn {
+  color: #b73578;
+  background: #ffe0ef;
+  box-shadow: none;
+}
+
+.page-link {
+  display: inline-block;
+  color: #ffffff;
+  background: #64bfd1;
+  box-shadow: 0 8px 18px rgba(100, 191, 209, 0.32);
+}
+
+button:hover,
+.page-link:hover {
+  transform: translateY(-2px);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(87, 54, 77, 0.45);
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-box {
+  position: relative;
+  width: min(420px, 100%);
+  padding: 32px;
+  border-radius: 22px;
+  text-align: center;
+  background: #ffffff;
+  border: 3px solid #ffd2e7;
+  box-shadow: 0 18px 50px rgba(87, 54, 77, 0.28);
+}
+
+.modal-box h2 {
+  margin-bottom: 10px;
+  color: #b73578;
+}
+
+.modal-box p {
+  line-height: 1.5;
+  color: #765469;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #b73578;
+  background: #ffe0ef;
+  box-shadow: none;
+}
+
+.quote-box {
+  max-width: 760px;
+}
+
+.quote-card {
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 2px solid #c9eff7;
+  box-shadow: 0 10px 28px rgba(100, 191, 209, 0.22);
+}
+
+.quote-card p {
+  font-size: clamp(1.35rem, 4vw, 2.2rem);
+  line-height: 1.5;
+  color: #b73578;
+  font-weight: bold;
+}
+
+@media (max-width: 760px) {
+  .app-box {
+    padding: 25px 18px;
+  }
+
+  .timer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .time-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 420px) {
+  .timer {
+    grid-template-columns: 1fr;
+  }
+
+  .time-card:last-child {
+    grid-column: auto;
+  }
+
+  button,
+  .page-link {
+    width: 100%;
+  }
+}

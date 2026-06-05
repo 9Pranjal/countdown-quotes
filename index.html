@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Countdown</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page countdown-page">
+    <section class="app-box">
+      <p class="small-title">Birthday Countdown</p>
+      <h1>Countdown to My Birthday</h1>
+      <p class="subtitle">A great year ahead</p>
+
+      <div class="timer" id="timer">
+        <div class="time-card">
+          <span id="months">00</span>
+          <p>Months</p>
+        </div>
+        <div class="time-card">
+          <span id="days">00</span>
+          <p>Days</p>
+        </div>
+        <div class="time-card">
+          <span id="hours">00</span>
+          <p>Hours</p>
+        </div>
+        <div class="time-card">
+          <span id="minutes">00</span>
+          <p>Minutes</p>
+        </div>
+        <div class="time-card">
+          <span id="seconds">00</span>
+          <p>Seconds</p>
+        </div>
+      </div>
+
+      <h2 id="message" class="message"></h2>
+
+      <div class="button-row">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn" class="secondary-btn">Pause</button>
+      </div>
+
+      <a href="quotes.html" class="page-link">Go to Quotes Page</a>
+    </section>
+  </main>
+
+  <div class="modal" id="welcomeModal">
+    <div class="modal-box">
+      <button class="close-btn" id="closeModal">&times;</button>
+      <h2>Welcome Birthday Star!</h2>
+      <p>Stay excited and enjoy your countdown journey.</p>
+    </div>
+  </div>
+
+  <script src="countdown.js"></script>
+</body>
+</html>
